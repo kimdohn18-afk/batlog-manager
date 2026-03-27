@@ -38,5 +38,11 @@
 <script src="app.js"></script>
 <script src="ui.js"></script>
 <script src="modal.js"></script>
+  <!-- 🔴 아래 부분만 새로 추가 -->
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
 </body>
 </html>
