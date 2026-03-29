@@ -77,13 +77,12 @@ function renderStats(){
   if(!rows.length){el.innerHTML='<div class="empty-msg">경기 기록이 없습니다</div>';return}
   rows.sort(function(a,b){return b.s.avg-a.s.avg});
   var h='<div style="overflow-x:auto"><table class="stat-table">';
-  h+='<tr><th class="name-col">선수</th><th>타율</th><th>출루</th><th>장타</th><th>OPS</th><th>타수</th><th>안타</th><th>HR</th><th>타점</th><th>득점</th><th>BB</th><th>SO</th><th>도루</th></tr>';
+  h+='<tr><th class="name-col">선수</th><th>타율</th><th>출루</th><th>OPS</th><th>타수</th><th>안타</th><th>HR</th><th>타점</th><th>득점</th><th>BB</th><th>SO</th><th>도루</th></tr>';
   rows.forEach(function(r){
     var s=r.s;
     h+='<tr><td class="name-col">'+r.name+'</td>';
     h+='<td>'+fmt(s.avg)+'</td>';
     h+='<td>'+fmt(s.obp)+'</td>';
-    h+='<td>'+fmt(s.slg)+'</td>';
     h+='<td>'+fmt(s.ops)+'</td>';
     h+='<td>'+s.ab+'</td><td>'+s.h+'</td><td>'+s.hr+'</td>';
     h+='<td>'+s.rbi+'</td><td>'+s.runs+'</td>';
